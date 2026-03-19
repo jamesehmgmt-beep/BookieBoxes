@@ -1,7 +1,7 @@
-import look1Image from "@/assets/look1.png";
-import look2Image from "@/assets/look2.png";
-import look3Image from "@/assets/look3.png";
-import look4Image from "@/assets/look4.png";
+import look1Image from "@/assets/look1.jpg";
+import look2Image from "@/assets/look2.jpg";
+import look3Image from "@/assets/look3.jpg";
+import look4Image from "@/assets/look4.jpg";
 
 const lookItems = [
   { imageUrl: look1Image },
