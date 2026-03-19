@@ -12,7 +12,7 @@ const TeamPage = () => {
             <Users className="w-12 h-12 mx-auto mb-4 text-foreground" />
             <h1 className="text-3xl font-serif mb-4">Our Team</h1>
             <p className="text-muted-foreground">
-              Meet the people behind Bookie Boxes.
+              Meet the people behind BATTI©.
             </p>
           </div>
 

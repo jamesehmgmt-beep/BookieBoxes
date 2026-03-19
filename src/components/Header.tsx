@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link, useLocation, useNavigate } from "react-router-dom";
-import { User, ShoppingBag, Menu, X, BookOpen } from "lucide-react";
+import { User, ShoppingBag, Menu, X } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
 import { CartDrawer } from "./CartDrawer";
 import { useAuth } from "@/hooks/useAuth";
@@ -10,18 +10,17 @@ import {
   SheetTrigger,
 } from "@/components/ui/sheet";
 
-const boxCategories = [
-  { title: "Mystery Boxes", link: "/category/mystery-box" },
-  { title: "YA Boxes", link: "/category/ya-box" },
-  { title: "Kids Boxes", link: "/category/kids-box" },
-  { title: "Romance Boxes", link: "/category/romance-box" },
-  { title: "Thriller Boxes", link: "/category/thriller-box" },
-  { title: "Non-Fiction Boxes", link: "/category/non-fiction-box" },
+const shapewearCategories = [
+  { title: "Shorts", link: "/category/shorts" },
+  { title: "Panties", link: "/category/panties" },
+  { title: "Jumpsuits", link: "/category/jumpsuits" },
+  { title: "Bodysuits", link: "/category/bodysuits" },
+  { title: "Rompers", link: "/category/romper" },
 ];
 
 const mainNavItems = [
   { title: "BEST SELLERS", link: "/category/best-seller" },
-  { title: "BOXES", link: "/category/boxes", hasSubmenu: true },
+  { title: "SHAPEWEAR", link: "/category/shapewear", hasSubmenu: true },
   { title: "GIFT CARDS", link: "/gift-cards" },
 ];
 
@@ -31,9 +30,9 @@ export const Header = () => {
   const { user } = useAuth();
   const isHomePage = location.pathname === "/";
   const [isScrolled, setIsScrolled] = useState(!isHomePage);
-  const [isBoxesOpen, setIsBoxesOpen] = useState(false);
+  const [isShapewearOpen, setIsShapewearOpen] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const [isBoxesMobileOpen, setIsBoxesMobileOpen] = useState(false);
+  const [isShapewearMobileOpen, setIsShapewearMobileOpen] = useState(false);
   const totalItems = useCartStore((state) => state.getTotalItems());
 
   const handleAccountClick = () => {
@@ -83,21 +82,21 @@ export const Header = () => {
                       {item.hasSubmenu ? (
                         <div>
                           <button
-                            onClick={() => setIsBoxesMobileOpen(!isBoxesMobileOpen)}
+                            onClick={() => setIsShapewearMobileOpen(!isShapewearMobileOpen)}
                             className="text-lg font-medium tracking-wider text-foreground hover:opacity-70 transition-opacity w-full text-left"
                           >
                             {item.title}
                           </button>
-                          {isBoxesMobileOpen && (
+                          {isShapewearMobileOpen && (
                             <div className="ml-4 mt-4 flex flex-col gap-3">
                               <Link
                                 to={item.link}
                                 onClick={() => setIsMobileMenuOpen(false)}
                                 className="text-base font-medium tracking-wide text-foreground hover:opacity-70 transition-opacity"
                               >
-                                All Boxes
+                                All Shapewear
                               </Link>
-                              {boxCategories.map((cat) => (
+                              {shapewearCategories.map((cat) => (
                                 <Link
                                   key={cat.link}
                                   to={cat.link}
@@ -138,8 +137,8 @@ export const Header = () => {
             {/* Boxes Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsBoxesOpen(true)}
-              onMouseLeave={() => setIsBoxesOpen(false)}
+              onMouseEnter={() => setIsShapewearOpen(true)}
+              onMouseLeave={() => setIsShapewearOpen(false)}
             >
               <Link
                 to="/category/boxes"
@@ -151,13 +150,13 @@ export const Header = () => {
               {/* Dropdown Menu */}
               <div 
                 className={`absolute top-full left-0 mt-2 w-56 bg-background border border-border shadow-lg transition-all duration-200 ${
-                  isBoxesOpen 
+                  isShapewearOpen 
                     ? "opacity-100 visible translate-y-0" 
                     : "opacity-0 invisible -translate-y-2"
                 }`}
               >
                 <div className="py-2">
-                  {boxCategories.map((cat) => (
+                  {shapewearCategories.map((cat) => (
                     <Link
                       key={cat.link}
                       to={cat.link}
@@ -179,10 +178,9 @@ export const Header = () => {
           </div>
 
           {/* Center Logo - Text based */}
-          <Link to="/" className="absolute left-1/2 -translate-x-1/2 flex items-center gap-2">
-            <BookOpen className="w-6 h-6 lg:w-7 lg:h-7 text-foreground" />
+          <Link to="/" className="absolute left-1/2 -translate-x-1/2">
             <span className="text-lg lg:text-xl font-bold tracking-widest text-foreground uppercase">
-              Bookie Boxes
+              BATTI
             </span>
           </Link>
 

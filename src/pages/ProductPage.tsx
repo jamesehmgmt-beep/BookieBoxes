@@ -209,7 +209,7 @@ const mockReviews = [
   {
     id: 2,
     rating: 5,
-    title: "5 stars to Bookie Boxes!",
+    title: "5 stars to Batti panties!",
     content: "Great fit, a tad expensive but they don't wear out!!",
     fits: "True to size",
     sizePurchased: null,
@@ -226,7 +226,7 @@ const mockReviews = [
     daysAgo: 24,
     hasResponse: true,
     response: {
-      author: "Bookie Boxes Customer Care",
+      author: "Batti Customer Care",
       content: "The underwear that truly sets the bar.",
       daysAgo: 24,
     },
@@ -405,7 +405,7 @@ const ReviewsSection = () => {
                 {/* Brand Response */}
                 {review.hasResponse && review.response && (
                   <div className="mt-4 bg-[#f5f0eb] p-4 rounded-md">
-                    <p className="text-sm text-muted-foreground mb-2">Response from Bookie Boxes</p>
+                    <p className="text-sm text-muted-foreground mb-2">Response from Batti</p>
                     <div className="flex items-center gap-2 mb-2">
                       <div className="w-6 h-6 bg-foreground rounded-full flex items-center justify-center">
                         <span className="text-background text-xs font-bold">B</span>
@@ -593,7 +593,7 @@ const ProductPage = () => {
 
             {/* Product Title */}
             <div>
-              <p className="text-base font-medium">Bookie Boxes</p>
+              <p className="text-base font-medium">BATTI©</p>
               <p className="text-base text-muted-foreground">{product.title}</p>
             </div>
 

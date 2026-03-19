@@ -12,7 +12,7 @@ const ReturnsPage = () => {
             <RefreshCw className="w-12 h-12 mx-auto mb-4 text-foreground" />
             <h1 className="text-3xl font-serif mb-4">Returns & Exchanges</h1>
             <p className="text-muted-foreground">
-              We want you to love your Bookie Boxes order. If something isn't right, we're here to help.
+              We want you to love your BATTI© pieces. If something isn't right, we're here to help.
             </p>
           </div>
 

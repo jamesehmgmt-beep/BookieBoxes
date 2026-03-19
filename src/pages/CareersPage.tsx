@@ -10,7 +10,7 @@ const CareersPage = () => {
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
             <Briefcase className="w-12 h-12 mx-auto mb-4 text-foreground" />
-            <h1 className="text-3xl font-serif mb-4">Careers at Bookie Boxes</h1>
+            <h1 className="text-3xl font-serif mb-4">Careers at BATTI©</h1>
             <p className="text-muted-foreground">
               Join our team and help shape the future of shapewear.
             </p>
@@ -21,7 +21,7 @@ const CareersPage = () => {
               We're always looking for talented individuals to join our team.
             </p>
             <p className="text-sm text-muted-foreground">
-              Send your CV to <a href="mailto:careers@bookieboxes.com" className="underline hover:text-foreground">careers@bookieboxes.com</a>
+              Send your CV to <a href="mailto:careers@batti.com" className="underline hover:text-foreground">careers@batti.com</a>
             </p>
           </div>
         </div>

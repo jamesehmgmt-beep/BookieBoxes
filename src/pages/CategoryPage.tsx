@@ -36,32 +36,32 @@ const categoryConfig: Record<string, { title: string; description: string; query
     query: undefined,
   },
   "shorts": {
-    title: "Mystery Boxes",
+    title: "Shorts",
     description: "Sculpting shorts for a seamless silhouette.",
     query: "Shorts",
   },
   "panties": {
-    title: "YA Boxes",
+    title: "Panties",
     description: "Shaping panties for everyday comfort.",
     query: "Panty",
   },
   "jumpsuits": {
-    title: "Kids Boxes",
+    title: "Jumpsuits",
     description: "Full-body sculpting jumpsuits.",
     query: "Jumpsuit",
   },
   "bodysuits": {
-    title: "Romance Boxes",
+    title: "Bodysuits",
     description: "Seamless bodysuits for complete control.",
     query: "Bodysuit",
   },
   "romper": {
-    title: "Thriller Boxes",
+    title: "Rompers",
     description: "Stylish rompers with built-in shaping.",
     query: "Romper",
   },
   "why-us": {
-    title: "Why Choose Bookie Boxes?",
+    title: "Why Choose BATTI©?",
     description: "Quality, comfort, and confidence in every piece.",
     query: undefined,
   },

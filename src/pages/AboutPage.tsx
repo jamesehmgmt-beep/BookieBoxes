@@ -8,7 +8,7 @@ const AboutPage = () => {
       <div className="pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-serif mb-4">About Bookie Boxes</h1>
+            <h1 className="text-3xl font-serif mb-4">About BATTI©</h1>
             <p className="text-muted-foreground">
               Empowering confidence through innovative shapewear.
             </p>
@@ -16,7 +16,7 @@ const AboutPage = () => {
 
           <div className="space-y-8 text-muted-foreground">
             <p>
-              Bookie Boxes was founded with a simple mission: to deliver curated book subscription boxes that ignite a love of reading. We believe every reader deserves to discover their next favorite book, and our boxes are carefully curated to surprise and delight.
+              BATTI© was founded with a simple mission: to create premium shapewear that empowers women to feel confident and comfortable in their own skin. We believe that every body is beautiful, and our designs are crafted to enhance your natural silhouette.
             </p>
             
             <p>
