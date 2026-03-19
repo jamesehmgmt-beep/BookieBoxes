@@ -13,7 +13,7 @@ const lookItems = [
 export const ShopTheLook = () => {
   return (
     <section className="section-padding py-12">
-      <h2 className="font-serif text-2xl md:text-3xl text-center mb-8 tracking-wide">Styled #Batti Looks</h2>
+      <h2 className="font-serif text-2xl md:text-3xl text-center mb-8 tracking-wide">Styled by Bookie</h2>
       
       <div className="grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-4">
         {lookItems.map((item, index) => (

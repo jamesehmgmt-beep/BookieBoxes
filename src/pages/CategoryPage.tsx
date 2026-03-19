@@ -61,7 +61,7 @@ const categoryConfig: Record<string, { title: string; description: string; query
     query: "Romper",
   },
   "why-us": {
-    title: "Why Choose BATTI©?",
+    title: "Why Choose Bookie?",
     description: "Quality, comfort, and confidence in every piece.",
     query: undefined,
   },

@@ -8,15 +8,15 @@ const AboutPage = () => {
       <div className="pt-24 pb-16">
         <div className="max-w-3xl mx-auto px-4">
           <div className="text-center mb-12">
-            <h1 className="text-3xl font-serif mb-4">About BATTI©</h1>
+            <h1 className="text-3xl font-serif mb-4">About Bookie</h1>
             <p className="text-muted-foreground">
-              Empowering confidence through innovative shapewear.
+              Premium infant clothing designed with love and care.
             </p>
           </div>
 
           <div className="space-y-8 text-muted-foreground">
             <p>
-              BATTI© was founded with a simple mission: to create premium shapewear that empowers women to feel confident and comfortable in their own skin. We believe that every body is beautiful, and our designs are crafted to enhance your natural silhouette.
+              Bookie was founded with a simple mission: to create premium infant clothing that wraps your little miracle in pure comfort and joy. We believe every baby deserves the softest fabrics, the cutest designs, and clothing made with care.
             </p>
             
             <p>

@@ -13,7 +13,7 @@ export const HeroSection = ({
       {/* Hero Image */}
       <img 
         src={heroImage} 
-        alt="BATTI Hero" 
+        alt="Bookie Hero" 
         className="absolute inset-0 w-full h-full object-cover"
       />
       

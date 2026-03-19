@@ -197,57 +197,11 @@ export const useCartStore = create<CartStore>()(
       },
 
       syncShippingProduct: () => {
+        // Shipping is now handled by Shopify at checkout.
+        // Remove any legacy shipping fee items from the cart.
         const { items } = get();
-        const productItems = items.filter(item => !item.isShippingFee);
-        const shippingItem = items.find(item => item.isShippingFee);
-        
-        // Calculate total price of products only (no discounts)
-        const productTotal = productItems.reduce((sum, item) => {
-          return sum + (parseFloat(item.price.amount) * item.quantity);
-        }, 0);
-
-        const needsShipping = productTotal > 0 && productTotal < FREE_SHIPPING_THRESHOLD;
-
-        if (needsShipping && !shippingItem) {
-          // Add shipping product
-          const shippingCartItem: CartItem = {
-            product: {
-              node: {
-                id: 'gid://shopify/Product/7520805191739',
-                title: 'Standard Shipping',
-                description: 'Shipping fee for orders under $120',
-                handle: 'standard-shipping',
-                priceRange: {
-                  minVariantPrice: {
-                    amount: '15.00',
-                    currencyCode: 'USD',
-                  },
-                },
-                images: { edges: [] },
-                variants: {
-                  edges: [{
-                    node: {
-                      id: SHIPPING_PRODUCT_VARIANT_ID,
-                      title: 'Default Title',
-                      price: { amount: '15.00', currencyCode: 'USD' },
-                      availableForSale: true,
-                      selectedOptions: [],
-                    },
-                  }],
-                },
-                options: [],
-              },
-            },
-            variantId: SHIPPING_PRODUCT_VARIANT_ID,
-            variantTitle: 'Standard Shipping',
-            price: { amount: '15.00', currencyCode: 'USD' },
-            quantity: 1,
-            selectedOptions: [],
-            isShippingFee: true,
-          };
-          set({ items: [...items, shippingCartItem] });
-        } else if (!needsShipping && shippingItem) {
-          // Remove shipping product
+        const hasShippingFee = items.some(item => item.isShippingFee);
+        if (hasShippingFee) {
           set({ items: items.filter(item => !item.isShippingFee) });
         }
       },
