@@ -1,4 +1,4 @@
-import hero2Image from "@/assets/hero2.png";
+import hero2Image from "@/assets/hero2book.png";
 
 interface SecondaryHeroSectionProps {
   className?: string;
