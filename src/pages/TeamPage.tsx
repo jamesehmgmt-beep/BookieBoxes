@@ -18,7 +18,7 @@ const TeamPage = () => {
 
           <div className="text-center py-12">
             <p className="text-muted-foreground">
-              Our passionate team of designers, engineers, and customer service specialists work together to bring you the best shapewear experience. We're united by our mission to help every woman feel confident and comfortable.
+              Our passionate team of designers, engineers, and customer service specialists work together to bring you the best infant clothing experience. We're united by our mission to help every parent find the perfect outfit for their little one.
             </p>
           </div>
         </div>

@@ -7,62 +7,56 @@ import { fetchProducts, formatPrice, ShopifyProduct } from "@/lib/shopify";
 import { useCartStore } from "@/stores/cartStore";
 import { toast } from "sonner";
 
-// Import subcategory images
-import shortsImage from "@/assets/shorts1.png";
-import pantiesImage from "@/assets/panties1.png";
-import jumpsuitsImage from "@/assets/jumpsuits1.png";
-import bodysuitImage from "@/assets/bodysuits1.png";
-import rompersImage from "@/assets/rompers1.png";
-
-// Subcategory circles configuration
-const subcategoryCircles = [
-  { title: "Shorts", link: "/category/shorts", image: shortsImage },
-  { title: "Panties", link: "/category/panties", image: pantiesImage },
-  { title: "Jumpsuits", link: "/category/jumpsuits", image: jumpsuitsImage },
-  { title: "Bodysuits", link: "/category/bodysuits", image: bodysuitImage },
-  { title: "Rompers", link: "/category/romper", image: rompersImage },
-];
-
 // Category configuration
 const categoryConfig: Record<string, { title: string; description: string; query?: string }> = {
   "best-seller": {
     title: "Best Sellers",
-    description: "Our most loved shapewear pieces, trusted by thousands.",
+    description: "Our most loved baby essentials, trusted by thousands of parents.",
     query: undefined,
   },
-  "shapewear": {
-    title: "All Shapewear",
-    description: "Discover our complete collection of sculpting essentials.",
+  "new-sets": {
+    title: "New Sets",
+    description: "Fresh arrivals — adorable matching sets for your little one.",
+    query: undefined,
+  },
+  "inspired": {
+    title: "Inspired",
+    description: "Curated collections inspired by the cutest trends.",
+    query: undefined,
+  },
+  "moms-favs": {
+    title: "Mom's Favs",
+    description: "The pieces moms can't stop buying — tried, tested, and loved.",
     query: undefined,
   },
   "shorts": {
     title: "Shorts",
-    description: "Sculpting shorts for a seamless silhouette.",
+    description: "Comfy baby shorts for everyday play.",
     query: "Shorts",
   },
   "panties": {
     title: "Panties",
-    description: "Shaping panties for everyday comfort.",
+    description: "Soft and gentle training essentials.",
     query: "Panty",
   },
   "jumpsuits": {
     title: "Jumpsuits",
-    description: "Full-body sculpting jumpsuits.",
+    description: "Adorable one-piece jumpsuits for easy dressing.",
     query: "Jumpsuit",
   },
   "bodysuits": {
     title: "Bodysuits",
-    description: "Seamless bodysuits for complete control.",
+    description: "Soft cotton bodysuits for all-day comfort.",
     query: "Bodysuit",
   },
   "romper": {
     title: "Rompers",
-    description: "Stylish rompers with built-in shaping.",
+    description: "Cute rompers perfect for every occasion.",
     query: "Romper",
   },
   "why-us": {
     title: "Why Choose Bookie?",
-    description: "Quality, comfort, and confidence in every piece.",
+    description: "Quality, comfort, and love in every stitch.",
     query: undefined,
   },
 };
@@ -73,7 +67,7 @@ const CategoryPage = () => {
   const [loading, setLoading] = useState(true);
   const addItem = useCartStore((state) => state.addItem);
 
-  const config = category ? categoryConfig[category] || { title: category.replace(/-/g, " ").toUpperCase(), description: "" } : categoryConfig["shapewear"];
+  const config = category ? categoryConfig[category] || { title: category.replace(/-/g, " ").toUpperCase(), description: "" } : categoryConfig["best-seller"];
 
   useEffect(() => {
     const loadProducts = async () => {
@@ -131,24 +125,6 @@ const CategoryPage = () => {
         )}
       </div>
 
-      {/* Subcategory Circles */}
-      <div className="py-8 px-4 md:px-8 lg:px-16 border-b border-border">
-        <div className="flex justify-center gap-6 md:gap-10 overflow-x-auto pb-2">
-          {subcategoryCircles.map((sub) => (
-            <Link
-              key={sub.link}
-              to={sub.link}
-              className="flex flex-col items-center gap-2 group flex-shrink-0"
-            >
-              <div className="w-20 h-20 md:w-24 md:h-24 rounded-full bg-secondary/50 border border-border flex items-center justify-center overflow-hidden group-hover:border-foreground transition-colors">
-                <img src={sub.image} alt={sub.title} className="w-full h-full object-cover" />
-              </div>
-              <span className="text-sm font-medium text-center">{sub.title}</span>
-            </Link>
-          ))}
-        </div>
-      </div>
-
       {/* Breadcrumb */}
       <div className="px-4 md:px-8 lg:px-16 py-4 border-b border-border">
         <nav className="text-sm text-muted-foreground">
@@ -194,6 +170,7 @@ const CategoryPage = () => {
                           src={firstImage.url}
                           alt={firstImage.altText || product.node.title}
                           className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105"
+                          loading="lazy"
                         />
                       ) : (
                         <div className="w-full h-full flex items-center justify-center text-muted-foreground text-sm">

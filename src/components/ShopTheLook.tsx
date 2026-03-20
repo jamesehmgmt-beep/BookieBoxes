@@ -1,7 +1,7 @@
-import look1Image from "@/assets/look1.jpg";
-import look2Image from "@/assets/look2.jpg";
-import look3Image from "@/assets/look3.jpg";
-import look4Image from "@/assets/look4.jpg";
+import look1Image from "@/assets/look1.webp";
+import look2Image from "@/assets/look2.webp";
+import look3Image from "@/assets/look3.webp";
+import look4Image from "@/assets/look4.webp";
 
 const lookItems = [
   { imageUrl: look1Image },
@@ -22,6 +22,7 @@ export const ShopTheLook = () => {
               src={item.imageUrl} 
               alt={`Look ${index + 1}`} 
               className="absolute inset-0 w-full h-full object-cover" 
+              loading="lazy"
             />
           </div>
         ))}

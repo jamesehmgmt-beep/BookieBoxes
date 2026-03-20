@@ -11,6 +11,7 @@ import { Button } from "@/components/ui/button";
 import { Minus, Plus, Trash2, Loader2, ExternalLink, ShoppingBag } from "lucide-react";
 import { useCartStore } from "@/stores/cartStore";
 import { formatPrice } from "@/lib/shopify";
+import { toast } from "sonner";
 
 interface CartDrawerProps {
   children: ReactNode;
@@ -34,10 +35,26 @@ export const CartDrawer = ({ children }: CartDrawerProps) => {
   } = useCartStore();
 
   const handleCheckout = async () => {
-    const checkoutUrl = await createCheckout();
-    if (checkoutUrl) {
-      window.open(checkoutUrl, '_blank');
-      setOpen(false);
+    try {
+      const checkoutUrl = await createCheckout();
+      if (checkoutUrl) {
+        window.open(checkoutUrl, '_blank');
+        setOpen(false);
+      } else {
+        // Fallback: direct the user to the Shopify store
+        toast.error("Checkout temporarily unavailable", {
+          description: "Redirecting you to our store...",
+        });
+        const shopDomain = import.meta.env.VITE_SHOPIFY_STORE_DOMAIN || 'bookieboxesofficial.myshopify.com';
+        window.open(`https://${shopDomain}/cart`, '_blank');
+      }
+    } catch (error) {
+      console.error('Checkout error:', error);
+      toast.error("Something went wrong", {
+        description: "Please try again or visit our store directly.",
+      });
+      const shopDomain = import.meta.env.VITE_SHOPIFY_STORE_DOMAIN || 'bookieboxesofficial.myshopify.com';
+      window.open(`https://${shopDomain}/cart`, '_blank');
     }
   };
 

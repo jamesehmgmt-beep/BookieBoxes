@@ -1,8 +1,8 @@
 import { Link } from "react-router-dom";
-import bestsellerImage from "@/assets/bestseller.jpg";
-import newsetsImage from "@/assets/newsets.jpg";
-import inspiredImage from "@/assets/inspired.jpg";
-import momfavsImage from "@/assets/momfavs.jpg";
+import bestsellerImage from "@/assets/bestseller.webp";
+import newsetsImage from "@/assets/newsets.webp";
+import inspiredImage from "@/assets/INSPIRED1.webp";
+import momfavsImage from "@/assets/momfavs.webp";
 
 export const CategoryGrid = () => {
   return (
@@ -17,6 +17,7 @@ export const CategoryGrid = () => {
             src={bestsellerImage} 
             alt="Best Sellers"
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
           <div className="absolute inset-0 z-10 flex items-end justify-center pb-8">
@@ -35,6 +36,7 @@ export const CategoryGrid = () => {
             src={newsetsImage} 
             alt="New Sets"
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
           <div className="absolute inset-0 z-10 flex items-end justify-center pb-8">
@@ -53,6 +55,7 @@ export const CategoryGrid = () => {
             src={inspiredImage} 
             alt="Inspired"
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
           <div className="absolute inset-0 z-10 flex items-end justify-center pb-8">
@@ -71,6 +74,7 @@ export const CategoryGrid = () => {
             src={momfavsImage} 
             alt="Moms Favs"
             className="absolute inset-0 w-full h-full object-cover"
+            loading="lazy"
           />
           <div className="absolute inset-0 bg-black/20 group-hover:bg-black/30 transition-colors" />
           <div className="absolute inset-0 z-10 flex items-end justify-center pb-8">

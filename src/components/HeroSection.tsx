@@ -1,12 +1,12 @@
 import { Link } from "react-router-dom";
-import heroImage from "@/assets/herobook.jpg";
+import heroImage from "@/assets/herobook.webp";
 
 interface HeroSectionProps {
   ctaLink?: string;
 }
 
 export const HeroSection = ({ 
-  ctaLink = "/category/shapewear"
+  ctaLink = "/category/best-seller"
 }: HeroSectionProps) => {
   return (
     <section className="relative h-screen w-full overflow-hidden bg-secondary">

@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import hero3Image from "@/assets/hero3.jpg";
+import hero3Image from "@/assets/hero3.webp";
 
 interface VideoHeroSectionProps {
   ctaLink?: string;
@@ -7,7 +7,7 @@ interface VideoHeroSectionProps {
 }
 
 export const VideoHeroSection = ({ 
-  ctaLink = "/category/shapewear",
+  ctaLink = "/category/best-seller",
   className 
 }: VideoHeroSectionProps) => {
   return (
@@ -17,6 +17,7 @@ export const VideoHeroSection = ({
         src={hero3Image} 
         alt="Hero" 
         className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
       />
       
       {/* Overlay */}

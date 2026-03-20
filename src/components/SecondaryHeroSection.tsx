@@ -1,4 +1,4 @@
-import hero2Image from "@/assets/hero2book.png";
+import hero2Image from "@/assets/hero2book.webp";
 
 interface SecondaryHeroSectionProps {
   className?: string;
@@ -11,6 +11,7 @@ export const SecondaryHeroSection = ({ className }: SecondaryHeroSectionProps) =
         src={hero2Image} 
         alt="Hero" 
         className="absolute inset-0 w-full h-full object-cover"
+        loading="lazy"
       />
     </section>
   );

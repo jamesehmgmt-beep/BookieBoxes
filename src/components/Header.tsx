@@ -9,7 +9,7 @@ import {
   SheetContent,
   SheetTrigger,
 } from "@/components/ui/sheet";
-import bookieLogo from "@/assets/bookie-logo.png";
+import bookieLogo from "@/assets/logo.webp";
 
 const mainNavItems = [
   { title: "BEST SELLERS", link: "/category/best-seller" },

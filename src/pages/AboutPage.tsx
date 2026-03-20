@@ -20,20 +20,20 @@ const AboutPage = () => {
             </p>
             
             <p>
-              Our team of designers and engineers work tirelessly to develop innovative fabrics and construction techniques that provide seamless shaping without sacrificing comfort. Every piece in our collection is crafted with attention to detail and a commitment to quality.
+              Our team of designers work tirelessly to develop innovative fabrics and adorable patterns that keep your baby comfortable and looking their best. Every piece in our collection is crafted with attention to detail and a commitment to quality.
             </p>
 
             <p>
-              We're proud to be a brand that celebrates all body types and sizes. Our inclusive sizing and thoughtful designs ensure that every woman can find her perfect fit.
+              We're proud to be a brand that celebrates every little milestone. Our thoughtful designs ensure that every baby — from newborn to toddler — can be wrapped in comfort and style.
             </p>
 
             <div className="border-t border-border pt-8">
               <h2 className="text-xl font-medium text-foreground mb-4">Our Values</h2>
               <ul className="space-y-3">
                 <li><strong className="text-foreground">Quality:</strong> Premium materials and expert craftsmanship in every piece.</li>
-                <li><strong className="text-foreground">Inclusivity:</strong> Shapewear for every body, every size, every woman.</li>
-                <li><strong className="text-foreground">Comfort:</strong> All-day wearability without compromise.</li>
-                <li><strong className="text-foreground">Confidence:</strong> Empowering you to feel your best, always.</li>
+                <li><strong className="text-foreground">Comfort:</strong> Pure cotton softness designed for your baby's delicate skin.</li>
+                <li><strong className="text-foreground">Safety:</strong> Gentle, hypoallergenic fabrics safe for newborns.</li>
+                <li><strong className="text-foreground">Love:</strong> Every stitch made with love for your little miracle.</li>
               </ul>
             </div>
           </div>

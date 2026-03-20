@@ -558,7 +558,7 @@ const ProductPage = () => {
         <nav className="text-xs text-muted-foreground">
           <Link to="/" className="hover:text-foreground">Home</Link>
           <span className="mx-2">/</span>
-          <Link to="/category/shapewear" className="hover:text-foreground">Womens Panties</Link>
+          <Link to="/category/best-seller" className="hover:text-foreground">Shop All</Link>
           <span className="mx-2">/</span>
           <span className="text-foreground">{product.title}</span>
         </nav>
@@ -597,14 +597,14 @@ const ProductPage = () => {
               <p className="text-base text-muted-foreground">{product.title}</p>
             </div>
 
-            {/* Compression Level */}
+            {/* Comfort Level */}
             <div className="flex items-center gap-2">
               <div className="flex gap-0.5">
                 <div className="w-6 h-1 bg-foreground"></div>
                 <div className="w-6 h-1 bg-foreground"></div>
-                <div className="w-6 h-1 bg-muted"></div>
+                <div className="w-6 h-1 bg-foreground"></div>
               </div>
-              <span className="text-xs uppercase tracking-wide text-muted-foreground">Firm Compression</span>
+              <span className="text-xs uppercase tracking-wide text-muted-foreground">Ultra Soft</span>
             </div>
 
             {/* Rating & SKU */}
@@ -1084,7 +1084,7 @@ const ProductPage = () => {
                   <ChevronDown className={`w-4 h-4 transition-transform ${productFeaturesOpen ? 'rotate-180' : ''}`} />
                 </CollapsibleTrigger>
                 <CollapsibleContent className="py-3 text-sm text-muted-foreground space-y-2">
-                  <p>• DuraFit® technology for firm compression</p>
+                  <p>• 100% pure cotton, gentle on baby skin</p>
                   <p>• No leg bands for seamless look</p>
                   <p>• 100% cotton gusset</p>
                   <p>• Invisible under clothes</p>
