@@ -77,16 +77,16 @@ export const Footer = () => {
       <div className="py-8 border-b border-background/20">
         <p className="text-center text-xs tracking-widest uppercase mb-4">FOLLOW US ON INSTAGRAM @BOOKIEBOXESCO</p>
         <div className="flex justify-center gap-4">
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://instagram.com/bookieboxesco" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
             <Instagram className="w-5 h-5" />
           </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://facebook.com/bookieboxesco" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
             <Facebook className="w-5 h-5" />
           </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://twitter.com/bookieboxesco" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
             <Twitter className="w-5 h-5" />
           </a>
-          <a href="#" className="hover:opacity-70 transition-opacity">
+          <a href="https://tiktok.com/@bookieboxesco" target="_blank" rel="noopener noreferrer" className="hover:opacity-70 transition-opacity">
             <Youtube className="w-5 h-5" />
           </a>
         </div>
@@ -123,7 +123,11 @@ export const Footer = () => {
         </div>
       </div>
 
-      {/* Bottom bar */}
-      
+      {/* Copyright bar */}
+      <div className="border-t border-background/20 py-4">
+        <p className="text-center text-xs text-background/50">
+          &copy; {new Date().getFullYear()} Bookie. All rights reserved.
+        </p>
+      </div>
     </footer>;
 };
